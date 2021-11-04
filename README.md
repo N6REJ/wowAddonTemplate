@@ -75,8 +75,7 @@ copy up-to-date with what's in github
 
 Don't be afraid to ask questions, but at the same time, be willing to take constructive criticism.
 
-[Yuyuli](https://www.curseforge.com/members/yuyuli/projects)" recently said to me "Your extensions are at what I would consider a beginner level...", which at first stung, I realized he was
-right and was trying to honestly guide me w/o holding my hand to my mouth.
+[Yuyuli](https://www.curseforge.com/members/yuyuli/projects) recently said to me "Your extensions are at what I would consider a beginner level...", which at first stung, I realized he was right and was trying to honestly guide me w/o holding my hand to my mouth.
 
 Triple check your code.  I can't tell you have many release's I've done that I had dumb bugs.
 
@@ -94,4 +93,4 @@ Be very careful with "global" variable names.  anything simple/short is almost g
 I hope you find this information useful.  Good luck on your endeavor to create wow addons.
 if your ever a member of [The Øld Gods](https://www.guilded.gg/The-Old-Gods) feel free to look me up.  Or even better hop on discord and say Howdy
 
-[Bear](https://www.curseforge.com/members/bearleeable/projects))
+[Bear](https://www.curseforge.com/members/bearleeable/projects)
