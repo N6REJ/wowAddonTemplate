@@ -1,4 +1,4 @@
-# wowAddonTemplate  ![image](https://img.shields.io/github/repo-size/N6REJ/wowAddonTemplate)  [![Build Curse Release](https://github.com/N6REJ/wowAddonTemplate/actions/workflows/action.yml/badge.svg)](https://github.com/N6REJ/wowAddonTemplate/actions/workflows/action.yml)
+# wowAddonTemplate  ![image](https://img.shields.io/github/repo-size/N6REJ/wowAddonTemplate)  [![Build Curse Release](https://github.com/N6REJ/wowAddonTemplate/actions/workflows/action.yml/badge.svg)](https://github.com/N6REJ/wowAddonTemplate/actions/workflows/action.yml)  ![image](https://img.shields.io/badge/Supports-Shadowlands-0B68D7)
 Raw template for making wow addons including packager support.
 
 Uses my [AdiBags Shadowlands Cooking](https://www.curseforge.com/wow/addons/adibags-shadowlands-cooking) addon as an example addon.
