@@ -1,0 +1,11 @@
+## Interface: 90105
+## Title: AdiBags - Shadowlands Cooking
+## Version: @project-version@
+## Author: BearLeeAble
+## X-License: MIT
+## X-Curse-Project-ID: 506378
+## DefaultState: enabled
+## Dependencies: AdiBags
+
+database.lua
+core.lua

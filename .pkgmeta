@@ -1,0 +1,10 @@
+package-as: AdiBags_Shadowlands_Cooking
+
+ignore:
+    - README.md
+    - .github
+    - .packager
+    - .release
+
+required-dependencies:
+    - AdiBags
