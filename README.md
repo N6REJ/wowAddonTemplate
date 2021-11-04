@@ -18,14 +18,15 @@ My suggestion would be to clone to the folder you want your repo to exist at the
 * *## Interface: 90105* Replace the *90105* with the value needed for your version of the game.  This can be found by putting ```/run print((select(4, GetBuildInfo())))``` in the chat window
 and then copying the value printed in chat.
 
-* *## Title:* Title to display/use in curse for your addon
-* *## Version: @project-version@* <b>DO NOT CHANGE THIS!</b>  It is used by the packager to automatically use your "tag" as the release name/number
-* *## Author: Bearesquishy*  Your name goes here.  If you put *@project-author@* instead of the name it will use your github user name instead
-* *## X-License: MIT*  Your license name/type
-* *## X-Curse-Project-ID:*  The ID # from your curseforge project page
-* *## DefaultState: enabled*  Whether your addon should be enabled when added to the game the first time.
-* *## Dependencies: AdiBags*  Any dependencies you have
-* *## X-Curse-Project-ID:* This would be the value found in your project on http://curseforge.com that identifies your unique project.
+* *## Title:* - Title to display/use in curse for your addon
+* *## Version: @project-version@* - <b>DO NOT CHANGE THIS!</b>  It is used by the packager to automatically use your "tag" as the release name/number
+* *## Author: Bearesquishy*  - Your name goes here.  If you put *@project-author@* instead of the name it will use your github user name instead
+* *## X-License: MIT*  - Your license name/type
+* *## X-Curse-Project-ID:*  - The ID # from your curseforge project page ![image](https://user-images.githubusercontent.com/1850089/140423589-df284750-aa28-4007-a098-a7dbad8c0581.png)
+
+* *## DefaultState: enabled*  - Whether your addon should be enabled when added to the game the first time. ( set to *disabled* if you don't want it automatically "on" )
+* *## Dependencies: AdiBags*  - Any dependencies you have
+* *## X-Curse-Project-ID:* - This would be the value found in your project on [Curseforge](http://curseforge.com) that identifies your unique project.
 
 ### Required tools
 * You must have [git](https://gitforwindows.org/) in order to use the packager locally.  It's also mandatory for using github repos.
@@ -61,16 +62,16 @@ and then copying the value printed in chat.
 * [Lua Broswer](https://www.curseforge.com/wow/addons/lua-browser) - *It displays Lua errors that occurred during your play session, Similar to ViragDevTool*
 
 ### Tips
-If you're new to developing wow addons like I am take the time to read what you can and start with very simple addons.|
-my most recent one is https://github.com/N6REJ/Auto_Swap which simply types a message in chat whenever you change zones.
+If you're new to developing wow addons like I am take the time to read what you can and start with very simple addons.
+My most recent one is [AutoSwap](https://github.com/N6REJ/Auto_Swap) which simply types a message in chat whenever you change zones.
 
 Watch for typo's and Capitalization.  Lua is very unforgiving about it.  You'd be amazed at the hours you can lose looking for the missing comma
 
 Don't just copy someone else's code!  Not only is it rude it might just be a copyright violation, ergo breaking the law, that will land you on the wrong side of the dev world.
-It's fine to use snippets, and look @ how someone else did something, especially when learning, but there "might" be a better way.
+It's fine to use snippets, and look at how someone else did something, especially when learning, but there "might" be a better way.
 
-Don't code in your main repo!  That is for finished work.  Create a *branch* and code there, then commit and push.  Once your totally done and you think its ready then create
-a *pr* and merge it into your main code.  Then deleted your local branch you just finished with, *checkout* the main branch and *pull* to get your local 
+Don't code in your main repo!  That is for finished work.  Create a *<b>branch</b>* and code there, then *<b>commit</b>* and *<b>push</b>*.  Once your totally done and you think its ready then create
+a *<b>pr</b>* and merge it into your main code.  Then deleted your local branch you just finished with, *<b>checkout</b>* the main branch and *<b>pull</b>* to get your local 
 copy up-to-date with what's in github
 
 Don't be afraid to ask questions, but at the same time, be willing to take constructive criticism.
@@ -81,14 +82,15 @@ Triple check your code.  I can't tell you have many release's I've done that I h
 
 Make a character on the [PTR server](https://us.battle.net/support/en/article/32229) and develop there!  That way your dev work doesn't break your retail character!! lol
 took me months to figure this out!
-Once there use *wowup* to add extensions you might need to that server, just like you do with retail.
-Simply select "Retail PTR" from the drop down on the top left of wowup interface and then click the magnifying glass to search for addons you need/want.
+Once there use *<b>wowup</b>* to add extensions you might need to that server, just like you do with retail.
+Simply select <b>Retail PTR</b> ![image](https://user-images.githubusercontent.com/1850089/140425422-698057f6-2420-4bf6-af19-66587ee4846e.png)
+ from the drop down on the top left of wowup interface and then click the magnifying glass to search for addons you need/want.
 
 put *[comments](https://www.lua.org/pil/1.3.html)* <b>EVERYWHERE!!!!</b> Seriously, there is no such thing as "too many comments" aka rems.  Their purpose is to tell the person
-reading the code what that part does.  You'll see them alot in my code & in a year when I need to update it & can't remember wth it did I'll be glad I did.
-Don't say to yourself "Oh, I won't forget".  I'd almost bet money you will.  Especially in a large block of code
+reading the code what that part does.  You'll see them alot in my code and in a year when I need to update it and I can't remember what it did I'll be glad I did.
+Don't say to yourself "Oh, I won't forget".  I'd almost bet money you will.  Especially in a large block of code.
 
-Be very careful with "global" variable names.  anything simple/short is almost guaranteed to conflict with someone else's addon.
+Be very careful with "*<b>global</b>*" variable names.  anything simple/short is almost guaranteed to conflict with someone else's addon.
 
 I hope you find this information useful.  Good luck on your endeavor to create wow addons.
 if your ever a member of [The Øld Gods](https://www.guilded.gg/The-Old-Gods) feel free to look me up.  Or even better hop on discord and say Howdy
