@@ -1,7 +1,7 @@
 # wowAddonTemplate  ![image](https://img.shields.io/github/repo-size/N6REJ/wowAddonTemplate)  [![Build Curse Release](https://github.com/N6REJ/wowAddonTemplate/actions/workflows/action.yml/badge.svg)](https://github.com/N6REJ/wowAddonTemplate/actions/workflows/action.yml)
 Raw template for making wow addons including packager support.
 
-Uses my [AdiBags Shadowlands Cooking](https://www.curseforge.com/wow/addons/adibags-shadowlands-cooking) addon as an example addon.
+Based on my [AdiBags Shadowlands Blacksmithing](https://github.com/N6REJ/AdiBags_Shadowlands_Blacksmithing) addon as an example addon.
 
 ### File structure
 1) The *.gitignore* file is very important.  It helps facilitate things used only during development from being included in builds.
@@ -10,10 +10,12 @@ Uses my [AdiBags Shadowlands Cooking](https://www.curseforge.com/wow/addons/adib
 4) *packager* folder is for local testing before creating an automatic release 
 5) *.release* folder is the resulting folder from running the packager showing what it would look like to curse.
 6) Every extension must have a *.toc* file that matches your extension name and must include each file needed for your extension
-7) *.pkgmeta* is needed for the packager
+7) *.pkgmeta* is needed for the packager  ( Change filename in header to match _.toc_)
 8) *core.lua* is the main program file, but you can name yours anything just change the name inside the *.toc*
 9) *database.lua* is an import file that is used for tables and other "data" that your addon might need.
-
+10) *wowaddontemplate.toc*   This is the actual name of your addon.  It's name MUST match the folder name for your addon including capitalization.
+    
+    
 My suggestion would be to clone to the folder you want your repo to exist at then the set the following values in the *.toc*
 * *## Interface: 90105* Replace the *90105* with the value needed for your version of the game.  This can be found by putting ```/run print((select(4, GetBuildInfo())))``` in the chat window
 and then copying the value printed in chat.

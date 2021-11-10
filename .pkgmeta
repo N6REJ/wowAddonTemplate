@@ -1,4 +1,4 @@
-package-as: AdiBags_Shadowlands_Cooking
+package-as: wowaddontemplate
 
 ignore:
     - README.md

@@ -1,4 +1,4 @@
--- AdiBags_Shadowlands_Cooking - Database
+-- wowaddontemplate - Database
 -- Created by @project-author@ character is Bearesquishy - dalaran please credit whenever.
 -- Source on GitHub: https://n6rej.github.io
 --
@@ -7,51 +7,59 @@ local addonName, addonTable, addon = ...
 -- Create addon table
 local db = {}
 
-db.name = "Shadowlands Cooking"
-db.desc = "Cooking items & reagents found in Shadowlands"
+db.name = "Shadowlands Blacksmithing"
+db.desc = "Blacksmithing reagents for Shadowlands"
 
 -- Filter info
 db.Filters = {
-    ["Meat"] = {
-        uiName = "Shadowlands Meat",
-        uiDesc = "Meat found in Shadowlands",
-        title = "Meat",
+    ["Ore"] = {
+        uiName = "Shadowlands Mining",
+        uiDesc = "Ore found in Shadowlands",
+        title = "Ore",
         items = {
-            [172052] = true, -- Aethereal Meat
-            [172053] = true, -- Tenebrous Ribs
-            [172054] = true, -- Raw Seraphic Wing
-            [172055] = true, -- Phantasmal Haunch
-            [179314] = true, -- Creeping Crawler Meat
-            [179315] = true -- Shadowy Shank
+            -- ID    = true,	-Item name
+            [171828] = true, -- Laestrite Ore
+            [171829] = true, -- Solenium Ore
+            [171830] = true, -- Oxxein Ore
+            [171831] = true, -- Phaedrum Ore
+            [171832] = true, -- Sinvyr Ore
+            [171833] = true, -- Elethium Ore
+            [171840] = true, -- Porous Stone
+            [171841] = true, -- Shaded Stone
+        },
+    },
+    ["Enchanting"] = {
+        uiName = "Shadowlands Enchanting",
+        uiDesc = "Reagents for Enchanting in Shadowlands",
+        title = "Enchanting",
+        items = {
+            [172437] = true, -- Enchanted Elethium Bar
         }
     },
-    ["Cooking"] = {
-        uiName = "Shadowlands Cooking",
-        uiDesc = "Reagents for cooking in Shadowlands",
-        title = "Cooking",
+    ["Vendor_Reagents"] = {
+        uiName = "Shadowlands Vendor Reagents",
+        uiDesc = "Reagents from vendors used in Shadowlands",
+        title = "Vendor Reagents",
         items = {
-            [172056] = true, -- Medley of Transplanar Spices
-            [172057] = true, -- Inconceivably Aged Vinegar
-            [172058] = true, -- Smuggled Azerothian Produce
-            [172059] = true, -- Rich Grazer Milk
-            [178786] = true -- Lusterwheat Flour
+            -- ID    = true,    --Item name
+            [178787] = true, -- Orboreal shards
         }
     },
-    ["Fish"] = {
-        uiName = "Shadowlands Fish",
-        uiDesc = "Fish found while fishing in Shadowlands",
-        title = "Fish",
+    ["Crafted_Reagents"] = {
+        uiName = "Shadowlands crafted reagents",
+        uiDesc = "Reagents made by crafting in Shadowlands",
+        title = "Crafted Reagents",
         items = {
-            -- ID,	--Item name
-            [173032] = true, -- Lost Sole
-            [173033] = true, -- Iridescent Amberjack
-            [173034] = true, -- Silvergill Pike
-            [173035] = true, -- Pocked Bonefish
-            [173036] = true, -- Spinefin Piranha
-            [173037] = true, -- Elysian Thade
-            [174327] = true -- Malformed Gnasher
+            -- ID    = true,    --Item name
+            [173384] = true, -- Crafter's Mark of the Chained Isle
+            [173383] = true, -- Crafter's Mark III
+            [173382] = true, -- Crafter's Mark II
+            [173381] = true, -- Crafter's Mark I
+            [183942] = true, -- Novice Mark II
+            [185960] = true, -- Vestige of Origins
+            [307611] = true, -- Shadowghast Ingot
         }
-    }
+    },
 }
 
 -- now that db is populated lets pass it on.
