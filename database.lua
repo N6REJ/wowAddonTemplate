@@ -17,7 +17,7 @@ db.Filters = {
         uiDesc = "Ore found in Shadowlands",
         title = "Ore",
         items = {
-            -- ID    = true,	-Item name
+            -- ID  = true,		--Item name
             [171828] = true, -- Laestrite Ore
             [171829] = true, -- Solenium Ore
             [171830] = true, -- Oxxein Ore
@@ -25,28 +25,31 @@ db.Filters = {
             [171832] = true, -- Sinvyr Ore
             [171833] = true, -- Elethium Ore
             [171840] = true, -- Porous Stone
-            [171841] = true, -- Shaded Stone
-        },
+            [171841] = true -- Shaded Stone
+        }
     },
-    ["Enchanting"] = {
-        uiName = "Shadowlands Enchanting",
-        uiDesc = "Reagents for Enchanting in Shadowlands",
-        title = "Enchanting",
+    ["Transmute"] = {
+        uiName = "Shadowlands Blacksmith Transmute",
+        uiDesc = "Transmuted items made by Blacksmiths in Shadowlands",
+        title = "Transmute",
         items = {
-            [172437] = true, -- Enchanted Elethium Bar
+            -- ID  = true,		--Item name
+            [171428] = true -- Shadowghast Ingot
         }
     },
     ["Vendor_Reagents"] = {
-        uiName = "Shadowlands Vendor Reagents",
-        uiDesc = "Reagents from vendors used in Shadowlands",
-        title = "Vendor Reagents",
+        uiName = "Shadowlands Blacksmith Reagents",
+        uiDesc = "Blacksmithing reagents from vendors used in Shadowlands",
+        title = "Blacksmith Reagents",
         items = {
             -- ID    = true,    --Item name
             [178787] = true, -- Orboreal shards
+            [177061] = true, -- Twilight Bark
+            [180733] = true, -- Luminous Flux
         }
     },
     ["Crafted_Reagents"] = {
-        uiName = "Shadowlands crafted reagents",
+        uiName = "Shadowlands Crafted Reagents",
         uiDesc = "Reagents made by crafting in Shadowlands",
         title = "Crafted Reagents",
         items = {
@@ -56,10 +59,9 @@ db.Filters = {
             [173382] = true, -- Crafter's Mark II
             [173381] = true, -- Crafter's Mark I
             [183942] = true, -- Novice Mark II
-            [185960] = true, -- Vestige of Origins
-            [307611] = true, -- Shadowghast Ingot
+            [185960] = true -- Vestige of Origins
         }
-    },
+    }
 }
 
 -- now that db is populated lets pass it on.

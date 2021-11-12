@@ -5,6 +5,7 @@ ignore:
     - .github
     - .packager
     - .release
+    - .badges
 
 required-dependencies:
     - AdiBags

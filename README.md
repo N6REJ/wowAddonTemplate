@@ -97,4 +97,7 @@ Be very careful with "*<b>global</b>*" variable names.  anything simple/short is
 I hope you find this information useful.  Good luck on your endeavor to create wow addons.
 if your ever a member of [The Øld Gods](https://www.guilded.gg/The-Old-Gods) feel free to look me up.  Or even better hop on discord and say Howdy
 
+### Badges
+the _.badges_ file contains sample badges for your git repo & curse page.  Be sure to adjust to your needs. 
+
 [Bear](https://www.curseforge.com/members/bearleeable/projects)
