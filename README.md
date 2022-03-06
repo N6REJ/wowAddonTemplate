@@ -100,4 +100,8 @@ if your ever a member of [The Øld Gods](https://www.guilded.gg/The-Old-Gods) fe
 ### Badges
 the _.badges_ file contains sample badges for your git repo & curse page.  Be sure to adjust to your needs. 
 
-[Bear](https://www.curseforge.com/members/bearleeable/projects)
+[Bear's Curseforge](https://www.curseforge.com/members/bearleeable/projects)
+
+***How to publish a release***
+To publish assign tag and push to repo, release will be automatically generated per the action.yml and sent to curseforge.
+To test the release type .packager/release.sh the local copy will be placed in the ".release" folder
