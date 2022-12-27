@@ -1,29 +1,24 @@
--- Created by N6REJ character is Bearesquishy - dalaran please credit whenever.
+-- Created by @project-author@ character is Bearesquishy - dalaran please credit whenever.
 -- Source on GitHub: https://n6rej.github.io
+---@type
+local addonName, addonTable = ...
 
-local addonName, addonTable, addon = ...
+-- Get the common Release names from Release.lua
+--local E = addonTable.Shadowlands
+local db = {}
 
 -- Get reference to AdiBags addon
 local AdiBags = LibStub("AceAddon-3.0"):GetAddon("AdiBags")
 
-local db = addonTable.db
-local MatchIDs
-local tooltip
 local Result = {}
+
 -- Debug mode switch
 local debugMode = false
 
-local function tooltipInit()
-	local tip, leftside = CreateFrame("GameTooltip"), {}
-	for i = 1, 6 do
-		local left, right = tip:CreateFontString(), tip:CreateFontString()
-		left:SetFontObject(GameFontNormal)
-		right:SetFontObject(GameFontNormal)
-		tip:AddFontStrings(left, right)
-		leftside[i] = left
-	end
-	tip.leftside = leftside
-	return tip
+if debugMode then
+	--@debug@
+	--"Version: " .. '@project-version@'
+	--@end-debug@
 end
 
 -- Check for existing filter
@@ -43,7 +38,7 @@ local function CreateFilter(name, uiName, uiDesc, title, items)
 	local filter = AdiBags:RegisterFilter(uiName, 98, "ABEvent-1.0")
 	-- Register Filter with adibags
 	filter.uiName = uiName
-	filter.uiDesc = uiDesc .. "Version: " .. '@project-version@'
+	filter.uiDesc = uiDesc .. "     Version: " .. "@project-version@"
 	filter.items = items
 
 	function filter:OnInitialize()
@@ -67,18 +62,6 @@ local function CreateFilter(name, uiName, uiDesc, title, items)
 		if self.items[tonumber(slotData.itemId)] then
 			return title
 		end
-
-		tooltip = tooltip or tooltipInit()
-		tooltip:SetOwner(UIParent, "ANCHOR_NONE")
-		tooltip:ClearLines()
-
-		if slotData.bag == BANK_CONTAINER then
-			tooltip:SetInventoryItem("player", BankButtonIDToInvSlotID(slotData.slot, nil))
-		else
-			tooltip:SetBagItem(slotData.bag, slotData.slot)
-		end
-
-		tooltip:Hide()
 	end
 end
 
@@ -97,5 +80,22 @@ local function AllFilters(db)
 	end
 end
 
--- Start here
-AllFilters(db)
+-- START HERE
+-- This will cycle thru each expansion listed in expansion.lua and run the database for that expansion.
+for key, value in pairs(addonTable.expansion) do
+	db = addonTable[value]
+	if (db ~= nil) then
+		AllFilters(db)
+	end
+end
+
+-- Check if globaldbs is being used in toc
+if (addonTable.Globaldbs ~= nil) then
+	-- Now process global databases
+	for key, value in pairs(addonTable.Globaldbs) do
+		db = addonTable[value]
+		if (db ~= nil) then
+			AllFilters(db)
+		end
+	end
+end
