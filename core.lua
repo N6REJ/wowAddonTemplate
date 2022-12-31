@@ -81,7 +81,7 @@ local function AllFilters(db)
 		local existingFilter = GetFilter(group.uiName)
 		-- Does filter already exist?
 		if existingFilter ~= nil then
-			existingFilter.items = Merge(existingFilter.items, group.items)
+			existingFilter.items = MergeItems(existingFilter.items, group.items)
 		else
 			-- name = Name of table
 			-- group.uiName = Name to use in filter listing
