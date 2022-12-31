@@ -21,16 +21,25 @@ if debugMode then
 	--@end-debug@
 end
 
--- Check for existing filter
-local function CheckFilter(newFilter)
-	local filterExists = false
+-- Merge filters if duplicate
+local function MergeItems(filters1, filters2)
+	local result = {}
+	for item, value in pairs(filters1) do
+		result[item] = value
+	end
+	for item, value in pairs(filters2) do
+		result[item] = value
+	end
+	return result
+end
+
+-- Get list of existing filters
+local function GetFilter(filterName)
 	for key, value in AdiBags:IterateFilters() do
-		if value.filterName == newFilter then
-			filterExists = true
-			return filterExists
+		if value.filterName == filterName then
+			return value
 		end
 	end
-	return filterExists
 end
 
 -- Create Filters
@@ -68,9 +77,12 @@ end
 -- Run filters
 local function AllFilters(db)
 	for name, group in pairs(db.Filters) do
+		-- Get known filters
+		local existingFilter = GetFilter(group.uiName)
 		-- Does filter already exist?
-		local filterExists = CheckFilter(group.uiName)
-		if not filterExists == nil or filterExists == false then
+		if existingFilter ~= nil then
+			existingFilter.items = Merge(existingFilter.items, group.items)
+		else
 			-- name = Name of table
 			-- group.uiName = Name to use in filter listing
 			-- group.uiDesc = Description to show in filter listing
