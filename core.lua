@@ -82,6 +82,7 @@ local function AllFilters(db)
 		-- Does filter already exist?
 		if existingFilter ~= nil then
 			existingFilter.items = MergeItems(existingFilter.items, group.items)
+			AdiBags:UpdateFilters()
 		else
 			-- name = Name of table
 			-- group.uiName = Name to use in filter listing
