@@ -46,7 +46,7 @@ end
 -- Create Filters
 local function CreateFilter(name, uiName, uiDesc, title, items)
 	local filter = AdiBags:RegisterFilter(uiName, 98, "ABEvent-1.0")
-	-- Register Filter with adibags
+	-- Register Filter with AdiBags
 	filter.uiName = uiName
 	filter.uiDesc = uiDesc .. "     Version: " .. "@project-version@"
 	filter.items = items
